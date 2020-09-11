@@ -1,0 +1,44 @@
+public class holiday {
+    private String name;
+    private int day;
+    private String month;
+    public holiday(String name,int day,String month)
+    {
+       this.name = name;
+       this.day= day;
+       this.month= month;
+    }
+    public boolean inSameMonth(holiday holiday_one,holiday holiday_two){
+        if (holiday_one.month.toLowerCase().equals(holiday_two.month.toLowerCase()))
+            return true;
+        else return false;
+    }
+    public static holiday retInstance(){
+        return new holiday("Independence Day",4,"July");
+    }
+    public double avgDate(holiday arr[]){
+        int count = arr.length;
+        int dateSum=0;
+        for (holiday hr:arr) {
+            dateSum += hr.day;
+        }
+        return (dateSum/count);
+            }
+    public static void main(String args[])
+    {
+
+        holiday h1=new holiday("abc",27,"dec");
+        holiday h2=new holiday("bcd",23,"Dec");
+        boolean res=h1.inSameMonth(h1,h2);
+        System.out.println(res);
+        holiday arr[]=new holiday[3];
+        arr[0]=new holiday("abc",27,"dec");
+        arr[1]=new holiday("bcd",7,"feb");
+        arr[2]=new holiday("xyz",23,"nov");
+        double avgDate=h1.avgDate(arr);
+        System.out.println(avgDate);
+        holiday ind=holiday.retInstance();
+        System.out.println(ind.day + ind.month + ind.name);
+
+    }
+    }

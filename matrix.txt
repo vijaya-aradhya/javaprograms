@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        String name;
+        String usn;
+        String branch;
+        Scanner scan = new Scanner(System.in);
+        String[][] stud = new String[2][3];
+        System.out.println("enter the first student name,usn and beanch\n");
+        stud[0][0] = scan.next();
+        stud[0][1] = scan.next();
+        stud[0][2] = scan.next();
+        System.out.println("enter the next student name,usn and beanch\n");
+        stud[1][0] = scan.next();
+        stud[1][1] = scan.next();
+        stud[1][2] = scan.next();
+        System.out.println("enter student name to get data");
+        String name1=scan.next();
+        if( name1.equals(stud[0][0]))
+        {
+            System.out.println(" name="+stud[0][0]+"\n usn="+stud[0][1]+"\n branch="+stud[0][2]);
+        }
+        else if(name1.equals(stud[1][0]))
+        {
+            System.out.println(" name="+stud[1][0]+"\n usn="+stud[1][1]+"\n branch="+stud[1][2]);
+        }
+        else System.out.println("name not found\n");
+    }
+}

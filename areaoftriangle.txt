@@ -1,0 +1,50 @@
+import java.lang.*;
+
+public class triangle {
+    int side1,side2,side3;
+    float ans,result;
+
+    public void setSide1(int side1)
+    {
+        this.side3=side1;
+    }
+    public void setSide2(int side2)
+    {
+        this.side3=side2;
+    }
+    public void setSide3(int side3)
+    {
+        this.side3=side3;
+    }
+    public void setAns(int ans)
+    {
+        this.ans=ans;
+    }
+    public int getSide1()
+    {
+      return side1;
+    }
+    public int getSide2()
+    {
+        return side2;
+    }
+    public int getSide3()
+    {
+        return side3;
+    }
+    public double getResult()
+    {
+      ans=(side1+side2+side3)/2;
+      double result=Math.sqrt(ans*(ans-side1)*(ans-side2)*(ans-side2));
+      return result;
+
+    }
+    public static void main(String args[])
+    {
+        triangle tr=new triangle();
+        tr.setSide1(10);
+        tr.setSide1(20);
+        tr.setSide3(30);
+        System.out.println("area of a triangle="+tr.getResult());
+    }
+}

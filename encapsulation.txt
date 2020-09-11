@@ -1,0 +1,24 @@
+import java.util.*;
+import java.lang.*;
+public class password {
+    private String pass;
+    Scanner input=new Scanner(System.in);
+    public password() {
+        this.pass = pass;
+    }
+        private void getpass() {
+            System.out.println("enter the password\n");
+            pass = input.next();
+            System.out.print("password enterd is:");
+            char[] pw = pass.toCharArray();
+            for (int i=0;i<pw.length;i=i+2) {
+                System.out.print(pw[i]);
+
+            }
+        }
+    public static void main(String[] args) {
+        password p = new password();
+        p.getpass();
+    }
+    }
+

@@ -1,0 +1,109 @@
+
+import java.util.Scanner;
+
+ class food {
+     void isSpicy() {
+         System.out.println("It is a spicy food");
+     }
+
+     void isSweet() {
+         System.out.println("It is a sweet food");
+     }
+ }
+     class veg extends food{
+         void isItBreakfast(){
+            System.out.println("you are eating vegitarean breakfast");
+        }
+         void isItLunch(){
+            System.out.println("you are eating vegitarean lunch");
+        }
+    }
+    class nonveg extends food{
+         void Breakfast(){
+            System.out.println("you are eating non vegitarean breakfast");
+
+        }
+         void Lunch(){
+            System.out.println("you are eating non vegitarean lunch");
+        }
+    }
+    class southIndian extends veg {
+        void idli() {
+            System.out.println("you are eating idli");
+        }
+
+        void dose() {
+            System.out.println("you are eating dose");
+        }
+    }
+    class northIndian extends veg {
+        void roti() {
+            System.out.println("you are eating roti");
+        }
+
+        void parota() {
+            System.out.println("you are eating parota");
+        }
+    }
+    class italian extends nonveg
+        {
+            void ital() {
+                System.out.println("you are eating italian food");
+                }
+
+            }
+            class mexican extends nonveg {
+                 void mex() {
+                    System.out.println("you are eating mexican food");
+                }
+
+    public static void main(String args[]) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("type veg or nonveg to see what ur eating");
+        String v1 = scanner.next();
+        if ("veg".equals(v1)) {
+            System.out.println("what u want south or north indian food");
+            String enter = scanner.next();
+            if ("south".equals(enter)) {
+                southIndian s = new southIndian();
+                s.isSweet();
+                s.isItBreakfast();
+                System.out.println("choose what u want dose or idli");
+                String v2 = scanner.next();
+                if ("dose".equals(v2)) {
+                    s.dose();
+                } else {
+                    s.idli();
+                }
+            } else {
+                northIndian n = new northIndian();
+                n.isSpicy();
+                n.isItLunch();
+                System.out.println("choose what u want roti or parota");
+                String v3 = scanner.next();
+                if ("roti".equals(v3)) {
+                    n.roti();
+                } else {
+                    n.parota();
+                }
+            }
+        }
+        if ("nonveg".equals(v1)) {
+            System.out.println("what u want italian or mexican");
+            String v4 = scanner.next();
+            if ("italian".equals(v4)) {
+                italian i = new italian();
+                i.ital();
+                i.Lunch();
+                i.isSpicy();
+            } else {
+                mexican m = new mexican();
+                m.mex();
+                m.Lunch();
+                m.isSpicy();
+            }
+
+        }
+    }
+
+    }

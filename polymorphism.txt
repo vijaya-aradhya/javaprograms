@@ -1,0 +1,49 @@
+
+class family {
+
+    void Print()
+    {
+        System.out.println("family member");
+    }
+}
+
+class father extends family {
+
+    void Print()
+    {
+        System.out.println("father of the family");
+    }
+}
+class mother extends family {
+
+    void Print() {
+        System.out.println("mother of the family");
+    }
+}
+    class son extends family {
+
+        void Print() {
+            System.out.println("son of the family");
+        }
+    }
+    class doughter extends family {
+
+            void Print()
+            {
+                System.out.println("doughter of the family");
+            }
+}
+class Polymorphism {
+    public static void main(String[] args)
+    {
+        family a;
+        a = new father();
+        a.Print();
+        a = new mother();
+        a.Print();
+        a = new son();
+        a.Print();
+        a = new doughter();
+        a.Print();
+    }
+}
